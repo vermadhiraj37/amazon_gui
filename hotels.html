@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Hotels • Wanderly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./index.html">Wanderly</a>
+        <nav class="nav">
+          <a href="./flights.html">Flights</a>
+          <a class="active" href="./hotels.html">Hotels</a>
+          <a href="./trips.html">My Trips</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1>Find Hotels</h1>
+        <form id="hotel-form" class="search-form" autocomplete="off">
+          <div class="form-row">
+            <label>
+              City
+              <input type="text" id="city" name="city" placeholder="City" required />
+            </label>
+            <label>
+              Check-in
+              <input type="date" id="checkin" name="checkin" required />
+            </label>
+            <label>
+              Check-out
+              <input type="date" id="checkout" name="checkout" required />
+            </label>
+            <label>
+              Guests
+              <input type="number" id="guests" name="guests" min="1" value="2" required />
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+
+        <div id="hotel-results" class="results"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Wanderly.</p>
+        <nav class="nav small">
+          <a href="./index.html">Home</a>
+          <a href="./flights.html">Flights</a>
+          <a class="active" href="./hotels.html">Hotels</a>
+          <a href="./trips.html">My Trips</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/hotels.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./index.html">Wanderly</a>
+        <nav class="nav">
+          <a href="./flights.html">Flights</a>
+          <a href="./hotels.html">Hotels</a>
+          <a href="./trips.html">My Trips</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Find your next adventure</h1>
+            <p>Search and book flights and hotels, then manage everything in one place.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="./flights.html">Search Flights</a>
+              <a class="btn" href="./hotels.html">Find Hotels</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Popular destinations</h2>
+          <div class="grid cards">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200&auto=format&fit=crop" alt="Paris" />
+              <div class="card-body">
+                <h3>Paris, France</h3>
+                <p>The city of lights, art, and exquisite cuisine.</p>
+                <div class="card-actions">
+                  <a class="btn btn-sm btn-primary" href="./flights.html?to=Paris">Flights</a>
+                  <a class="btn btn-sm" href="./hotels.html?city=Paris">Hotels</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="New York" />
+              <div class="card-body">
+                <h3>New York, USA</h3>
+                <p>Skyline views, Broadway shows, and food from everywhere.</p>
+                <div class="card-actions">
+                  <a class="btn btn-sm btn-primary" href="./flights.html?to=New%20York">Flights</a>
+                  <a class="btn btn-sm" href="./hotels.html?city=New%20York">Hotels</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop" alt="Tokyo" />
+              <div class="card-body">
+                <h3>Tokyo, Japan</h3>
+                <p>Tradition meets technology in this vibrant metropolis.</p>
+                <div class="card-actions">
+                  <a class="btn btn-sm btn-primary" href="./flights.html?to=Tokyo">Flights</a>
+                  <a class="btn btn-sm" href="./hotels.html?city=Tokyo">Hotels</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Handpicked packages</h2>
+          <div class="grid cards">
+            <article class="card">
+              <div class="card-body">
+                <h3>Romantic Paris Getaway</h3>
+                <p>Round-trip flight + 3 nights in a boutique hotel near the Seine.</p>
+                <ul class="list">
+                  <li>From $899 per person</li>
+                  <li>Flexible dates, breakfast included</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="btn btn-primary" href="./flights.html?to=Paris">Book package</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h3>Tokyo Tech Tour</h3>
+                <p>Explore Akihabara and Shibuya with curated hotel picks.</p>
+                <ul class="list">
+                  <li>From $1199 per person</li>
+                  <li>Includes airport transfer</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="btn btn-primary" href="./flights.html?to=Tokyo">Book package</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Wanderly. All rights reserved.</p>
+        <nav class="nav small">
+          <a href="./index.html">Home</a>
+          <a href="./flights.html">Flights</a>
+          <a href="./hotels.html">Hotels</a>
+          <a href="./trips.html">My Trips</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
